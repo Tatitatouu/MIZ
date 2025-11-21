@@ -1,0 +1,147 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #f5f7fa;
+  z-index: 100;
+  animation: slideDownNav 0.8s ease-out;
+}
+
+/* Animation de clignotement */
+@keyframes blink {
+  0%, 49%, 100% {
+    opacity: 1;
+  }
+  50%, 99% {
+    opacity: 0.4;
+  }
+}
+
+/* Animation de halo clignotant */
+@keyframes haloBlink {
+  0%, 100% {
+    box-shadow: 0 0 15px 4px rgba(45, 74, 97, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px 12px rgba(45, 74, 97, 0.5);
+  }
+}
+
+.header-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: clamp(0.5rem, 3vw, 4rem);
+  padding: clamp(0.75rem, 2vw, 1.5rem) clamp(1rem, 3vw, 2rem);
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(0.5rem, 2vw, 2rem);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2d4a61;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #1a3a52;
+}
+
+.nav-icons {
+  display: flex;
+  gap: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.icon-btn {
+  width: clamp(36px, 10vw, 50px);
+  height: clamp(36px, 10vw, 50px);
+  border-radius: 50%;
+  border: none;
+  background-color: #2d4a61;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: haloBlink 2.5s ease-in-out infinite;
+}
+
+.icon-btn:hover {
+  transform: scale(1.08);
+  background-color: #1a3a52;
+  box-shadow: 0 4px 12px rgba(45, 74, 97, 0.2);
+}
+
+/* --- RESPONSIVE (Tablet: 768px to 1024px) --- */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .header-nav {
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .icon-btn {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* --- RESPONSIVE (Mobile: 481px to 767px) --- */
+@media (max-width: 767px) and (min-width: 481px) {
+  .header-nav {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  .icon-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* --- RESPONSIVE (Small Mobile: up to 480px) --- */
+@media (max-width: 480px) {
+  .header-nav {
+    padding: 0.75rem 1rem;
+    gap: 2rem;
+  }
+
+  .nav-links {
+    gap: 2rem;
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+  }
+
+  .icon-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
