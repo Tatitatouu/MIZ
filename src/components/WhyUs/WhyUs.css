@@ -1,0 +1,237 @@
+.whyus-container {
+  width: 100%;
+  padding: 5rem 2rem;
+  background: #fafaf8;
+  font-family: 'Satoshi', sans-serif;
+  position: relative;
+  overflow: visible;
+}
+
+@keyframes floatBubble2Desktop {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-40px, 30px) scale(0.95);
+  }
+  66% {
+    transform: translate(25px, 15px) scale(1.05);
+  }
+}
+
+@keyframes floatBubble2Mobile {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-40px, 30px) scale(0.95);
+  }
+  66% {
+    transform: translate(-5px, 15px) scale(1.05);
+  }
+}
+
+.whyus-content {
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.whyus-title {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, #778d9b 0%, #e0ba8c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.whyus-subtitle {
+  text-align: center;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.advantage-card {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 2.5rem 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantage-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(79, 107, 132, 0.15);
+  border-color: #4f6b84;
+}
+
+.advantage-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #778d9b 0%, #5a6f7f 100%);
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(119, 141, 155, 0.25);
+}
+
+.advantage-card:hover .advantage-icon {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(119, 141, 155, 0.4);
+}
+
+.advantage-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d4a61;
+  margin-bottom: 0.75rem;
+}
+
+.advantage-description {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.advantage-tags {
+  display: none;
+}
+
+.tag {
+  display: none;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.service-list li {
+  font-size: 0.92rem;
+  color: #4a4a4a;
+  line-height: 1.7;
+  margin-bottom: 0.9rem;
+  padding-left: 1.3rem;
+  position: relative;
+}
+
+.service-list li:before {
+  content: "•";
+  color: #2d4a61;
+  font-weight: bold;
+  font-size: 1.3rem;
+  position: absolute;
+  left: 0;
+  top: -0.15rem;
+}
+
+/* --- RESPONSIVE (Tablet: 768px to 1024px) --- */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .whyus-container {
+    padding: 4rem 2rem;
+  }
+
+  .whyus-container::before {
+    width: 300px;
+    height: 300px;
+    top: -180px;
+    right: -80px;
+  }
+
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .advantage-card {
+    padding: 2.5rem 2rem;
+    min-height: 300px;
+  }
+}
+
+/* --- RESPONSIVE (Mobile: up to 767px) --- */
+@media (max-width: 767px) {
+  .whyus-container {
+    padding: 3rem 1.5rem;
+  }
+
+  .whyus-container::before {
+    width: 180px;
+    height: 180px;
+    top: -100px;
+    right: -50px;
+    animation: floatBubble2Mobile 25s ease-in-out infinite;
+  }
+
+  .whyus-title {
+    margin-bottom: 0.75rem;
+  }
+
+  .whyus-subtitle {
+    margin-bottom: 2rem;
+  }
+
+  .advantages-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .advantage-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .advantage-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .advantage-title {
+    font-size: 1.2rem;
+  }
+
+  .advantage-description {
+    font-size: 0.95rem;
+  }
+}

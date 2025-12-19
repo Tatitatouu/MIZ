@@ -4,9 +4,52 @@
   left: 0;
   right: 0;
   width: 100%;
-  background-color: #f5f7fa;
+  max-width: 100%;
+  background-color: transparent;
+  border-radius: 0;
   z-index: 100;
   animation: slideDownNav 0.8s ease-out;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.scroll-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: #ffffff;
+  transition: width 0.1s ease-out;
+  z-index: 101;
+}
+
+.header.scrolled {
+  background-color: #2d4a61;
+  box-shadow: 0 6px 24px rgba(45, 74, 97, 0.15);
+  border-radius: 0 0 50px 50px;
+}
+
+.header-nav {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header .nav-links a {
+  color: #2d4a61;
+}
+
+.header.scrolled .nav-links a {
+  color: #ffffff;
+}
+
+.header .icon-btn {
+  background-color: #2d4a61;
+}
+
+.header.scrolled .icon-btn {
+  background-color: #ffffff;
+  color: #2d4a61;
+  animation: haloBlinkWhite 2.5s ease-in-out infinite;
 }
 
 /* Animation de clignotement */
@@ -26,6 +69,16 @@
   }
   50% {
     box-shadow: 0 0 30px 12px rgba(45, 74, 97, 0.5);
+  }
+}
+
+/* Animation de halo clignotant blanc */
+@keyframes haloBlinkWhite {
+  0%, 100% {
+    box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px 12px rgba(255, 255, 255, 0.6);
   }
 }
 
@@ -137,7 +190,7 @@
   }
 
   .nav-links a {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
 
   .icon-btn {
