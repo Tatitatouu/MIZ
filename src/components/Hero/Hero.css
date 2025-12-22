@@ -88,7 +88,54 @@
   height: 100%;
   background: #fafaf8;
   z-index: -1;
-  overflow: visible;
+  overflow: hidden;
+}
+
+/* === FLOATING BUBBLES === */
+.hero-bubbles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(139, 157, 177, 0.22) 0%, rgba(196, 181, 160, 0.16) 100%);
+  backdrop-filter: blur(8px);
+}
+
+.hero-bubble.bubble-1 {
+  width: 280px;
+  height: 280px;
+  top: -60px;
+  right: -60px;
+  animation: floatBubble1 15s ease-in-out infinite;
+}
+
+.hero-bubble.bubble-2 {
+  width: 180px;
+  height: 180px;
+  bottom: 10%;
+  left: -40px;
+  animation: floatBubble2 18s ease-in-out infinite;
+}
+
+.hero-gradient-orb {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(139, 157, 177, 0.12) 0%, rgba(196, 181, 160, 0.08) 40%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulseOrb 8s ease-in-out infinite;
+}
+
+@keyframes pulseOrb {
+  0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.5; transform: translate(-50%, -50%) scale(1.1); }
 }
 
 /* Décoration bulle (haut gauche) - BOUGE */
@@ -164,16 +211,13 @@
 }
 
 .headline-static {
-  background: linear-gradient(135deg, #778d9b 0%, #e0ba8c 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #2d4a61;
 }
 
 .bounce-word {
   display: inline;
   white-space: nowrap;
-  color: #e0ba8c;
+  color: #c4b5a0;
 }
 
 .bounce-letter {
@@ -184,6 +228,10 @@
 
 /* --- RESPONSIVE (Tablet: 768px to 1024px) --- */
 @media (max-width: 1024px) and (min-width: 768px) {
+  .hook-section::before {
+    width: 100px;
+    height: 100px;
+  }
   .hero-content {
     grid-template-columns: 0.9fr 1fr;
     padding: 2rem 1.5rem;
@@ -213,6 +261,10 @@
 
 /* --- RESPONSIVE (Mobile: 481px to 767px) --- */
   @media (max-width: 767px) and (min-width: 481px) {
+    .hook-section::before {
+    width: 100px;
+    height: 100px;
+  }
   .hero-container {
     height: 80vh;
     display: flex;
@@ -248,6 +300,10 @@
 
 /* --- RESPONSIVE (Small Mobile: up to 480px) --- */
   @media (max-width: 480px) {
+    .hook-section::before {
+    width: 100px;
+    height: 100px;
+  }
   .hero-container {
     height: 75vh;
     display: flex;

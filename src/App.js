@@ -1,21 +1,24 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
-import Hero from './components/Hero';
-import Hook from './components/Hook/Hook';
-import WhyUs from './components/WhyUs/WhyUs';
-import Steps from './components/Steps/Steps';
-import CTA from './components/CTA/CTA';
+import Footer from './components/Footer/Footer';
+import Home from './pages/Home';
+import AboutUs from './pages/AboutUs';
+import Contact from './pages/Contact';
 
 function App() {
   return (
-    <div className="App">
-    <Header />
-      <Hero />
-      <Hook />
-      <WhyUs />
-      <Steps />
-      <CTA />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

@@ -7,7 +7,7 @@ export default function WhyUs() {
     {
       icon: <FiCheck size={36} />,
       title: "Simplicité",
-      description: "Une démarche claire et sans jargon complexe",
+      description: "Une démarche claire et accessible à tous",
       tags: ["Accessible", "Rapide", "Efficace"]
     },
     {

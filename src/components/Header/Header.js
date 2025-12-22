@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 import { FiCalendar } from 'react-icons/fi';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const location = useLocation();
+  const isAboutPage = location.pathname === '/about';
+  const isContactPage = location.pathname === '/contact';
+  const isDarkHero = isAboutPage || isContactPage;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,22 +28,24 @@ export default function Header() {
   }, []);
 
   const handleCalendarClick = () => {
-    window.open('https://calendly.com/tristan-monimpotzen', '_blank');
+    window.open('https://calendly.com/contact-monimpotzen', '_blank');
   };
 
   return (
-    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
+    <header className={`header ${scrolled ? 'scrolled' : ''} ${isDarkHero ? 'white-text' : ''}`}>
       {scrolled && <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }}></div>}
       <nav className="header-nav">
         <div className="nav-links">
-          <a href="/about">About us</a>
-          <a href="/contact">Contact</a>
+          {isAboutPage || isContactPage ? (
+            <Link to="/">Accueil</Link>
+          ) : (
+            <Link to="/about">À propos</Link>
+          )}
+          <Link to="/contact">Contact</Link>
         </div>
-        <div className="nav-icons">
-          <button className="icon-btn calendar-btn" onClick={handleCalendarClick}>
-            <FiCalendar size={20} />
-          </button>
-        </div>
+        <button className="calendar-button" onClick={handleCalendarClick}>
+          <FiCalendar size={24} />
+        </button>
       </nav>
     </header>
   );

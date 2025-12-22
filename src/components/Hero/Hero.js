@@ -8,7 +8,13 @@ export default function Hero() {
 
   return (
     <section className="hero-container">
-      <div className="hero-background"></div>
+      <div className="hero-background">
+        <div className="hero-bubbles">
+          <div className="hero-bubble bubble-1"></div>
+          <div className="hero-bubble bubble-2"></div>
+          <div className="hero-gradient-orb"></div>
+        </div>
+      </div>
       <div className="hero-content">
         <div className="hero-left">
           <img src={logo} alt="Logo" className="big-brand" />
