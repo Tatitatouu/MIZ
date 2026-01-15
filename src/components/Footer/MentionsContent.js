@@ -4,19 +4,17 @@ const MentionsContent = () => (
   <>
     <h3>1. Éditeur du site</h3>
     <p><strong>Raison sociale :</strong> Mon Impôt Zen</p>
-    <p><strong>Forme juridique :</strong> [À compléter]</p>
-    <p><strong>Capital social :</strong> [À compléter]</p>
-    <p><strong>Siège social :</strong> [Adresse à compléter]</p>
-    <p><strong>SIREN :</strong> [À compléter]</p>
-    <p><strong>SIRET :</strong> [À compléter]</p>
-    <p><strong>Numéro de TVA intracommunautaire :</strong> [À compléter]</p>
+    <p><strong>Forme juridique :</strong> Société par actions simplifiée</p>
+    <p><strong>Capital social :</strong> 2.000 €</p>
+    <p><strong>Siège social :</strong> 72 B Vieux Chemin de Bergheim 67600 Sélestat</p>
+    <p><strong>SIREN :</strong> 991351313</p>
+    <p><strong>SIRET :</strong> 99135131300010</p>
+    <p><strong>Numéro de TVA intracommunautaire :</strong> FR01991351313</p>
     <p><strong>Email :</strong> contact@monimpotzen.fr</p>
-    <p><strong>Directeur de la publication :</strong> [Nom à compléter]</p>
 
     <h3>2. Hébergeur</h3>
-    <p><strong>Nom de l'hébergeur :</strong> [À compléter]</p>
-    <p><strong>Adresse :</strong> [À compléter]</p>
-    <p><strong>Téléphone :</strong> [À compléter]</p>
+    <p><strong>Nom de l'hébergeur :</strong> Vercel Inc. </p>
+    <p><strong>Adresse :</strong> 340 S Lemon Ave #4133 Walnut, CA 91789 États-Unis</p>
 
     <h3>3. Propriété intellectuelle</h3>
     <p>L'ensemble des contenus présents sur le site Mon Impôt Zen (textes, images, graphismes, logo, icônes, etc.) sont protégés par le droit d'auteur et le droit des marques. Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site est interdite sans autorisation écrite préalable.</p>

@@ -18,6 +18,10 @@ const FAQ = () => {
       answer: "Non, l'accompagnement est 100% en visioconférence. Cela vous permet de bénéficier de notre expertise où que vous soyez, sans contrainte de déplacement, tout en gardant un contact direct et personnalisé."
     },
     {
+      question: "Vous avez une demande spécifique ?",
+      answer: "Contactez nous : nous analyserons votre besoin et vous proposerons un devis personnalisé adapté à votre situation."
+    },
+    {
       question: "Combien de temps dure un accompagnement ?",
       answer: "L'accompagnement est annuel avec un suivi régulier. Après la première année à 240€ TTC, vous pouvez continuer à bénéficier de nos services pour 20€ TTC par mois, ce qui représente un accompagnement continu et une tranquillité d'esprit tout au long de l'année."
     }

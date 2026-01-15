@@ -12,9 +12,17 @@ const CGVContent = () => (
     <p>Le contrat est conclu pour une durée initiale d'un (1) an et se renouvelle tacitement par périodes successives d'un (1) an, sauf résiliation par l'une des parties avec un préavis de 90 jours avant échéance.</p>
 
     <h3>Article 4 – Prix et conditions de paiement</h3>
-    <p><strong>Première année :</strong> 240 € TTC, payable à la signature.</p>
-    <p><strong>Années suivantes :</strong> 20 € TTC par mois, par prélèvement automatique, à partir du mois de juillet de l'année en cours, avec reconduction tacite.</p>
-    <p><strong>Économies fiscales :</strong> en complément, une rémunération de 20 % TTC est due sur les économies fiscales effectivement obtenues par le Client suite à la révision des trois (3) années précédentes, calculée uniquement sur la base des documents officiels de l'administration fiscale (avis de rectification ou avis d'imposition modifié). Paiement sous 30 jours après remboursement.</p>
+    <p><strong>Première année :</strong> 240 € TTC, payable en une seule fois à la signature du contrat.</p>
+    <p><strong>Années suivantes :</strong> 20 € TTC par mois, par prélèvement automatique, à compter du mois de juillet de l’année en cours. Le contrat est reconduit tacitement.</p>
+    <p><strong>Économies fiscales :</strong> en complément, le Prestataire percevra une rémunération de 20 % TTC calculée sur le montant des économies fiscales effectivement obtenues par le Client à la suite de la révision des trois (3) années fiscales précédentes.  
+    Le calcul est effectué exclusivement sur la base d’un document officiel de l’administration fiscale (avis de rectification ou avis d’imposition modifié).</p>
+    <p>Un acompte de 50 % sera dû à la signature du devis. Le solde devra être réglé dans un délai de trente (30) jours à compter de la notification du remboursement au Client.</p>
+    <p>Le Prestataire peut proposer un accompagnement à la rectification des dernières déclarations d’impôts sur devis distinct.</p>
+    <p>Dans le cadre de sa mission, le Prestataire peut être amené à identifier une erreur ou une omission dans les déclarations fiscales relatives à des années antérieures.
+    Dans ce cas, son intervention consistera à accompagner le Client dans la réalisation d’une déclaration rectificative ou modificative, afin de limiter tout risque de redressement ou de majoration ultérieure.</p>
+    <p>Le coût de cette prestation sera établi en fonction du temps consacré à l’étude, à la préparation et au traitement du dossier.
+    Un devis détaillant la nature des travaux à réaliser sera soumis à l’accord écrit du Client avant toute intervention.</p>
+
 
     <h3>Article 5 – Droit de rétractation</h3>
     <p>Si le Client est un consommateur, il bénéficie d'un délai de rétractation de 14 jours à compter de la souscription, sauf en cas d'exécution immédiate du service avec son accord.</p>

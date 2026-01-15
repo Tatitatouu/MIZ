@@ -218,6 +218,130 @@
   min-height: 120px;
 }
 
+/* Messages d'erreur */
+.error-message {
+  display: block;
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 6px;
+  font-weight: 500;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Compteur de caractères */
+.char-count {
+  display: block;
+  text-align: right;
+  color: #8b9db1;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* Style pour les champs avec erreur */
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #e74c3c;
+}
+
+/* Checkbox de sécurité */
+.security-check {
+  margin: 24px 0;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 2px solid #e0e5eb;
+  transition: all 0.3s ease;
+}
+
+.security-check:hover {
+  border-color: #d4c5b0;
+  background: #fff;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  font-size: 0.95rem;
+  color: #2d4a61;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: relative;
+  height: 24px;
+  width: 24px;
+  background-color: #fff;
+  border: 2px solid #b8c5d6;
+  border-radius: 6px;
+  margin-right: 12px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.checkbox-container:hover .checkmark {
+  border-color: #2d4a61;
+  transform: scale(1.05);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2d4a61;
+  border-color: #2d4a61;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-label {
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Message d'erreur pour le checkbox de sécurité */
+.security-error {
+  margin-top: 10px;
+  margin-left: 0;
+  padding: 8px 12px;
+  background: #fee;
+  border-left: 3px solid #e74c3c;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
 .submit-btn {
   display: inline-flex;
   align-items: center;
@@ -246,6 +370,10 @@
 }
 
 .submit-btn .loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   animation: pulse 1s ease-in-out infinite;
 }
 
