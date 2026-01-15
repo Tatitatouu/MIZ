@@ -195,7 +195,7 @@ const AboutUs = () => {
               de compréhension ou face à une réglementation volontairement complexifiée.
             </p>
             <p className="section-text highlight-text">
-              Dans le cadre de notre activité de gestionnaires de patrimoine, nous accompagnions déjà nos clients gratuitement sur leurs déclarations fiscales. 
+              Dans le cadre de notre activité de gestionnaires de patrimoine, nous accompagnions déjà nos clients sur leurs déclarations fiscales. 
               Face à la récurrence des erreurs constatées et au stress généré par cet exercice, nous avons décidé de créer 
             <strong> MIZ </strong>, une structure dédiée, afin de décharger totalement le client en lui apportant expertise, conseil, disponibilité et sérénité.
             </p>
