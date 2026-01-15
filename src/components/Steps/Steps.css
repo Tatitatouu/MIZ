@@ -186,6 +186,21 @@
 
 /* --- RESPONSIVE --- */
 
+@media (max-width: 1024px) {
+  .steps-list {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .big-number {
+    font-size: 12rem;
+  }
+
+  .step-title {
+    font-size: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
 
   .steps-list {
@@ -233,5 +248,21 @@
 
   .steps-container {
     padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .big-number {
+    font-size: 8rem;
+    top: 10px;
+    right: -5px;
+  }
+
+  .step-title {
+    font-size: 1.5rem;
+  }
+
+  .image-text-wrapper {
+    padding: 1rem 1rem;
   }
 }

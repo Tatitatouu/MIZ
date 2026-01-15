@@ -610,7 +610,7 @@
 .step-number {
   width: 90px;
   height: 90px;
-  background: linear-gradient(135deg, #b8c5d6 0%, #d4c5b0 100%);
+  background: linear-gradient(135deg, #2d4a61 0%, #3d5a71 100%);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -619,7 +619,7 @@
   font-size: 2.5rem;
   font-weight: 800;
   margin: 0 auto 25px;
-  box-shadow: 0 15px 40px rgba(139, 157, 177, 0.25);
+  box-shadow: 0 15px 40px rgba(45, 74, 97, 0.3);
   position: relative;
   transition: all 0.4s ease;
 }
@@ -850,10 +850,54 @@
 
   .steps-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .approach-step {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    text-align: left;
+    padding: 0;
+    opacity: 0;
+  }
+
+  .step-connector {
+    width: 4px;
+    height: 40px;
+    background: linear-gradient(180deg, #b8c5d6 0%, #d4c5b0 50%, #c4b5a0 100%);
+    margin-left: 43px;
+    transform: scaleY(0);
+    transform-origin: top;
+    border-radius: 2px;
+  }
+
+  .step-number {
+    flex-shrink: 0;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .step-content {
+    flex: 1;
   }
 
   .timeline-line {
     display: none;
+  }
+
+  .steps-timeline::before {
+    content: '';
+    position: absolute;
+    left: 45px;
+    top: 45px;
+    bottom: 45px;
+    width: 4px;
+    background: linear-gradient(180deg, #b8c5d6 0%, #d4c5b0 50%, #c4b5a0 100%);
+    border-radius: 2px;
+    transform-origin: top;
+    transform: scaleY(0);
   }
 
   .offer-box {
@@ -897,4 +941,8 @@
     padding: 18px 35px;
     font-size: 1rem;
   }
+}
+
+.section-title {
+  font-size: clamp(2rem, 6vw, 3.5rem);
 }

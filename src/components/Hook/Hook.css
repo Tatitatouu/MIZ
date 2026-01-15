@@ -1,7 +1,7 @@
 .hook-section {
   width: 100%;
-  padding: 5em 1em 3em 2em;  
-  background: #fafaf8;
+  padding: 6em 1em 4em 2em;  
+  background: linear-gradient(180deg, #fafaf8 0%, #f8f7f5 50%, #fafaf8 100%);
   position: relative;
   overflow: hidden;
 }
@@ -98,7 +98,7 @@
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
   .hook-section {
-    padding: 10px 15px;
+    padding: 4em 1.5em 3em 1.5em;
   }
 
   .hook-section::before {
@@ -109,16 +109,20 @@
   }
 
   .hook-headline h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .whyus-subtitle {
+    font-size: 1.5rem;
   }
 
   .services-intro {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     margin-bottom: 40px;
   }
 
   .typing-text {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     min-height: 50px;
   }
 
@@ -129,7 +133,7 @@
 
 @media (max-width: 480px) {
   .hook-section {
-    padding: 10px 15px;
+    padding: 3em 1.2em 2.5em 1.2em;
   }
 
   .hook-section::before {
@@ -140,16 +144,16 @@
   }
 
   .hook-headline h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .services-intro {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 30px;
   }
 
   .typing-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
     min-height: 45px;
   }
 

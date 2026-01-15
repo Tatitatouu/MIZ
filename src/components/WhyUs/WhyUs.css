@@ -1,7 +1,7 @@
 .whyus-container {
   width: 100%;
-  padding: 1rem 2rem;
-  background: #fafaf8;
+  padding: 5rem 2rem 6rem 2rem;
+  background: linear-gradient(180deg, #fafaf8 0%, #f5f3f0 50%, #fafaf8 100%);
   font-family: 'Satoshi', sans-serif;
   position: relative;
   overflow: visible;
@@ -236,8 +236,13 @@
   }
 
   .advantage-icon {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .advantage-icon svg {
+    width: 32px;
+    height: 32px;
   }
 
   .advantage-title {
