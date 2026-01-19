@@ -4,7 +4,7 @@ export const siteConfig = {
   siteName: "Mon Impôt Zen",
   siteUrl: "https://monimpotzen.fr",
   defaultDescription: "Simplifiez votre déclaration d'impôts avec MIZ. Accompagnement fiscal personnalisé, optimisation fiscale et expertise patrimoniale pour particuliers.",
-  defaultImage: "/og-image.jpg",
+  defaultImage: "/logo_bleu.svg",
   twitterHandle: "@monimpotzen",
   email: "contact@monimpotzen.fr"
 };

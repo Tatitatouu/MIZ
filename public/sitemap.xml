@@ -9,9 +9,9 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://monimpotzen.fr/og-image.jpg</image:loc>
-      <image:title>Mon Impôt Zen - Simplifiez votre déclaration d'impôts</image:title>
-      <image:caption>Service d'accompagnement fiscal personnalisé pour particuliers</image:caption>
+      <image:loc>https://monimpotzen.fr/logo_bleu.svg</image:loc>
+      <image:title>Logo Mon Impôt Zen - Simplifiez votre déclaration d'impôts</image:title>
+      <image:caption>Service d'accompagnement fiscal personnalisé pour optimiser vos impôts</image:caption>
     </image:image>
   </url>
   
@@ -22,9 +22,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://monimpotzen.fr/og-about.jpg</image:loc>
-      <image:title>L'équipe Mon Impôt Zen</image:title>
-      <image:caption>Découvrez Emir et Tristan, experts fiscaux</image:caption>
+      <image:loc>https://monimpotzen.fr/logo_bleu.svg</image:loc>
+      <image:title>À propos de Mon Impôt Zen</image:title>
+      <image:caption>Expertise fiscale et accompagnement personnalisé par Emir et Tristan</image:caption>
     </image:image>
   </url>
   
