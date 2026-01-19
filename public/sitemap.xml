@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://monimpotzen.fr/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://monimpotzen.fr/og-image.jpg</image:loc>
+      <image:title>Mon Impôt Zen - Simplifiez votre déclaration d'impôts</image:title>
+      <image:caption>Service d'accompagnement fiscal personnalisé pour particuliers</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Page À propos -->
+  <url>
+    <loc>https://monimpotzen.fr/about</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://monimpotzen.fr/og-about.jpg</image:loc>
+      <image:title>L'équipe Mon Impôt Zen</image:title>
+      <image:caption>Découvrez Emir et Tristan, experts fiscaux</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Page Contact -->
+  <url>
+    <loc>https://monimpotzen.fr/contact</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+</urlset>

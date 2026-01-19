@@ -11,12 +11,12 @@ const Footer = () => {
   const [isMentionsOpen, setIsMentionsOpen] = useState(false);
 
   const handleCalendarClick = () => {
-    window.open('https://calendly.com/contact-monimpotzen', '_blank');
+    window.open('https://calendly.com/contact-monimpotzen', '_blank', 'noopener,noreferrer');
   };
 
   return (
-    <footer className="footer">
-      <div className="footer-decoration">
+    <footer className="footer" role="contentinfo" itemScope itemType="https://schema.org/WPFooter">
+      <div className="footer-decoration" aria-hidden="true">
         <div className="footer-bubble footer-bubble-1"></div>
         <div className="footer-bubble footer-bubble-2"></div>
       </div>
@@ -25,36 +25,61 @@ const Footer = () => {
           <div className="footer-cta">
             <h3>Prêt à optimiser votre fiscalité ?</h3>
             <p>Prenez rendez-vous pour un accompagnement personnalisé</p>
-            <button className="footer-cta-btn" onClick={handleCalendarClick}>
-              <FiCalendar size={18} />
+            <button 
+              className="footer-cta-btn" 
+              onClick={handleCalendarClick}
+              aria-label="Réserver un appel de consultation fiscale"
+            >
+              <FiCalendar size={18} aria-hidden="true" />
               <span>Réserver un appel</span>
             </button>
           </div>
           
-          <div className="footer-info">
+          <address className="footer-info" itemScope itemType="https://schema.org/Organization">
+            <meta itemProp="name" content="Mon Impôt Zen" />
             <div className="footer-info-item">
-              <FiMail className="footer-icon" />
-              <a href="mailto:contact@monimpotzen.fr">contact@monimpotzen.fr</a>
+              <FiMail className="footer-icon" aria-hidden="true" />
+              <a 
+                href="mailto:contact@monimpotzen.fr" 
+                itemProp="email"
+                aria-label="Envoyer un email à contact@monimpotzen.fr"
+              >
+                contact@monimpotzen.fr
+              </a>
             </div>
             <div className="footer-info-item">
-              <FiPhone className="footer-icon" />
+              <FiPhone className="footer-icon" aria-hidden="true" />
               <span>Du lundi au vendredi, 9h-18h</span>
             </div>
             <div className="footer-info-item">
-              <FiMapPin className="footer-icon" />
-              <span>100% en visioconférence</span>
+              <FiMapPin className="footer-icon" aria-hidden="true" />
+              <span itemProp="location">100% en visioconférence</span>
             </div>
-          </div>
+          </address>
         </div>
 
-        <div className="footer-divider"></div>
+        <div className="footer-divider" aria-hidden="true"></div>
 
         <div className="footer-bottom">
-          <p className="footer-copyright">&copy; {currentYear} Tous droits réservés</p>
-          <div className="footer-links">
-            <button onClick={() => setIsMentionsOpen(true)} className="footer-link-btn">Mentions légales</button>
-            <button onClick={() => setIsCGVOpen(true)} className="footer-link-btn">CGV</button>
-          </div>
+          <p className="footer-copyright">
+            <small>&copy; {currentYear} Mon Impôt Zen - Tous droits réservés</small>
+          </p>
+          <nav className="footer-links" aria-label="Liens légaux">
+            <button 
+              onClick={() => setIsMentionsOpen(true)} 
+              className="footer-link-btn"
+              aria-label="Voir les mentions légales"
+            >
+              Mentions légales
+            </button>
+            <button 
+              onClick={() => setIsCGVOpen(true)} 
+              className="footer-link-btn"
+              aria-label="Voir les conditions générales de vente"
+            >
+              CGV
+            </button>
+          </nav>
         </div>
       </div>
 

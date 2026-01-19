@@ -1,3 +1,27 @@
+# Robots.txt pour Mon Impôt Zen
 # https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://monimpotzen.fr/sitemap.xml
+
+# Crawl-delay pour être respectueux des ressources
+Crawl-delay: 1
+
+# Autoriser les principaux robots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /

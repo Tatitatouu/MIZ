@@ -2,44 +2,96 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <link rel="icon" href="%PUBLIC_URL%/logo_bleu.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/logo_bleu.svg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/logo_bleu.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Simplifiez votre déclaration d'impôts avec MIZ. Plus de 70% des contribuables oublient des avantages fiscaux. Accompagnement fiscal personnalisé, optimisation et expertise patrimoniale. 100% en visioconférence." />
+    <meta name="keywords" content="déclaration impôts, optimisation fiscale, réduction impôts, conseil fiscal, impôt sur le revenu, déclaration revenus, avantages fiscaux, fiscalité particulier, accompagnement fiscal, mon impôt zen, MIZ" />
+    <meta name="author" content="Mon Impôt Zen" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://monimpotzen.fr/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://monimpotzen.fr/" />
+    <meta property="og:title" content="MIZ - Mon Impôt Zen | Simplifiez votre déclaration d'impôts" />
+    <meta property="og:description" content="Plus de 70% des contribuables oublient des avantages fiscaux. MIZ vous accompagne pour optimiser votre déclaration d'impôts et réduire votre imposition légalement." />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mon Impôt Zen - Service d'accompagnement fiscal" />
+    <meta property="og:site_name" content="Mon Impôt Zen" />
+    <meta property="og:locale" content="fr_FR" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://monimpotzen.fr/" />
+    <meta name="twitter:title" content="MIZ - Mon Impôt Zen | Simplifiez votre déclaration d'impôts" />
+    <meta name="twitter:description" content="Plus de 70% des contribuables oublient des avantages fiscaux. MIZ vous accompagne pour optimiser votre déclaration d'impôts." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Mon Impôt Zen - Service d'accompagnement fiscal" />
+    
+    <!-- PWA & Mobile -->
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Mon Impôt Zen" />
+    <meta name="application-name" content="Mon Impôt Zen" />
+    <meta name="msapplication-TileColor" content="#0a0a0a" />
+    
+    <!-- Géolocalisation -->
+    <meta name="geo.region" content="FR" />
+    <meta name="geo.placename" content="France" />
+    <meta name="language" content="French" />
+    <meta name="content-language" content="fr" />
+    
+    <!-- Manifest & Sitemap -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Preconnect pour performance -->
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link rel="dns-prefetch" href="https://api.fontshare.com" />
+    
     <!-- Satoshi Font -->
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap" rel="stylesheet">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>MIZ - Mon impôt zen</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap" rel="stylesheet" />
+    
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Mon Impôt Zen",
+      "alternateName": "MIZ",
+      "url": "https://monimpotzen.fr",
+      "logo": "https://monimpotzen.fr/logo_bleu.svg",
+      "description": "Service d'accompagnement fiscal et d'optimisation de déclaration d'impôts pour particuliers",
+      "email": "contact@monimpotzen.fr",
+      "priceRange": "€€",
+      "areaServed": {
+        "@type": "Country",
+        "name": "France"
+      },
+      "serviceType": ["Déclaration d'impôts", "Optimisation fiscale", "Conseil patrimonial"]
+    }
+    </script>
+    
+    <title>MIZ - Mon Impôt Zen | Simplifiez votre déclaration d'impôts</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <div style="padding: 20px; text-align: center; font-family: sans-serif;">
+        <h1>Mon Impôt Zen</h1>
+        <p>Pour utiliser ce site, veuillez activer JavaScript dans votre navigateur.</p>
+        <p>Contact : <a href="mailto:contact@monimpotzen.fr">contact@monimpotzen.fr</a></p>
+      </div>
+    </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

@@ -32,27 +32,41 @@ const FAQ = () => {
   };
 
   return (
-    <section className="faq-section">
+    <section className="faq-section" aria-labelledby="faq-title" itemScope itemType="https://schema.org/FAQPage">
       <div className="faq-container">
-        <h2 className="faq-title">Foire aux questions</h2>
-        <div className="faq-list">
+        <h2 className="faq-title" id="faq-title">Foire aux questions</h2>
+        <div className="faq-list" role="list">
           {faqData.map((item, index) => (
-            <div
+            <article
               key={index}
               className={`faq-item ${activeIndex === index ? 'active' : ''}`}
+              role="listitem"
+              itemScope 
+              itemProp="mainEntity" 
+              itemType="https://schema.org/Question"
             >
               <button
                 className="faq-question"
                 onClick={() => toggleFAQ(index)}
                 aria-expanded={activeIndex === index}
+                aria-controls={`faq-answer-${index}`}
+                id={`faq-question-${index}`}
               >
-                <span>{item.question}</span>
-                <span className="faq-icon">{activeIndex === index ? '−' : '+'}</span>
+                <span itemProp="name">{item.question}</span>
+                <span className="faq-icon" aria-hidden="true">{activeIndex === index ? '−' : '+'}</span>
               </button>
-              <div className="faq-answer">
-                <p>{item.answer}</p>
+              <div 
+                className="faq-answer" 
+                id={`faq-answer-${index}`}
+                role="region"
+                aria-labelledby={`faq-question-${index}`}
+                itemScope 
+                itemProp="acceptedAnswer" 
+                itemType="https://schema.org/Answer"
+              >
+                <p itemProp="text">{item.answer}</p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

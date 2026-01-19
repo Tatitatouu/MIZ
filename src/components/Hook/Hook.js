@@ -43,25 +43,32 @@ const Hook = () => {
   }, [charIndex, isDeleting, serviceIndex, services]);
 
   return (
-    <section className="hook-section">
+    <section className="hook-section" aria-labelledby="hook-headline">
       <div className="hook-container">
         <div className="hook-headline">
-          <h2>
+          <h2 id="hook-headline">
             Par manque de temps ou de visibilité, plus de <span className="highlight">70 %</span> des personnes que nous rencontrons oublient de déclarer au moins un avantage fiscal pouvant réduire leur imposition.
           </h2>
         </div>
 
-        <div className="hook-separator"></div>
+        <div className="hook-separator" aria-hidden="true"></div>
 
         <div className="hook-services">
           <p className="services-intro">
             Ne subissez plus vos impôts, nous vous accompagnons pour :
           </p>
 
-          <div className="typing-container">
+          <div className="typing-container" aria-live="polite" aria-label="Nos services d'accompagnement fiscal">
             <span className="typing-text">{displayText}</span>
-            <span className="typing-cursor"></span>
+            <span className="typing-cursor" aria-hidden="true"></span>
           </div>
+          
+          {/* Liste cachée pour le SEO et l'accessibilité */}
+          <ul className="sr-only" aria-label="Liste complète de nos services">
+            {services.map((service, index) => (
+              <li key={index}>{service}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

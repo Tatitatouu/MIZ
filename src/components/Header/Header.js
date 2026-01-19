@@ -28,23 +28,28 @@ export default function Header() {
   }, []);
 
   const handleCalendarClick = () => {
-    window.open('https://calendly.com/contact-monimpotzen', '_blank');
+    window.open('https://calendly.com/contact-monimpotzen', '_blank', 'noopener,noreferrer');
   };
 
   return (
-    <header className={`header ${scrolled ? 'scrolled' : ''} ${isDarkHero ? 'white-text' : ''}`}>
-      {scrolled && <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }}></div>}
-      <nav className="header-nav">
+    <header className={`header ${scrolled ? 'scrolled' : ''} ${isDarkHero ? 'white-text' : ''}`} role="banner">
+      {scrolled && <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }} aria-hidden="true"></div>}
+      <nav className="header-nav" aria-label="Navigation principale">
         <div className="nav-links">
           {isAboutPage || isContactPage ? (
-            <Link to="/">Accueil</Link>
+            <Link to="/" aria-label="Retour à l'accueil">Accueil</Link>
           ) : (
-            <Link to="/about">À propos</Link>
+            <Link to="/about" aria-label="En savoir plus sur Mon Impôt Zen">À propos</Link>
           )}
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact" aria-label="Nous contacter">Contact</Link>
         </div>
-        <button className="calendar-button" onClick={handleCalendarClick}>
-          <FiCalendar size={24} />
+        <button 
+          className="calendar-button" 
+          onClick={handleCalendarClick}
+          aria-label="Prendre rendez-vous sur Calendly"
+          title="Réserver un appel"
+        >
+          <FiCalendar size={24} aria-hidden="true" />
         </button>
       </nav>
     </header>

@@ -34,9 +34,9 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero-container">
-      {/* Background shapes */}
-      <div className="hero-bg-shapes">
+    <section className="hero-container" aria-label="Section d'accueil Mon Impôt Zen">
+      {/* Background shapes - decorative */}
+      <div className="hero-bg-shapes" aria-hidden="true">
         <div className="floating-bubble bubble-1"></div>
         <div className="floating-bubble bubble-2"></div>
         <div className="floating-bubble bubble-3"></div>
@@ -45,15 +45,22 @@ export default function Hero() {
       {/* Content */}
       <div className="hero-content">
         <div className="hero-left">
-          <img src="/logo_blanc.svg" alt="MIZ Logo" className="hero-logo" />
+          <img 
+            src="/logo_blanc.svg" 
+            alt="Logo Mon Impôt Zen - Service d'accompagnement fiscal personnalisé" 
+            className="hero-logo"
+            width="200"
+            height="200"
+            loading="eager"
+          />
         </div>
         <div className="hero-right">
           <h1 className="hero-headline">
             <span className="headline-static">Le zen de l'impôt ?</span>
             <span className="headline-static">C'est{' '}
-              <span className="bounce-word">
+              <span className="bounce-word" aria-label={word}>
                 {letters.map((letter, index) => (
-                  <span key={index} className="bounce-letter" style={{ '--letter-index': index }}>
+                  <span key={index} className="bounce-letter" style={{ '--letter-index': index }} aria-hidden="true">
                     {letter}
                   </span>
                 ))}
@@ -65,7 +72,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="hero-scroll-indicator">
+      <div className="hero-scroll-indicator" role="presentation" aria-hidden="true">
         <span>Découvrir</span>
         <div className="scroll-arrow"></div>
       </div>
