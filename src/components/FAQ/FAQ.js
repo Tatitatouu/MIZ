@@ -32,7 +32,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="faq-section" aria-labelledby="faq-title" itemScope itemType="https://schema.org/FAQPage">
+    <section className="faq-section" aria-labelledby="faq-title">
       <div className="faq-container">
         <h2 className="faq-title" id="faq-title">Foire aux questions</h2>
         <div className="faq-list" role="list">
@@ -41,9 +41,6 @@ const FAQ = () => {
               key={index}
               className={`faq-item ${activeIndex === index ? 'active' : ''}`}
               role="listitem"
-              itemScope 
-              itemProp="mainEntity" 
-              itemType="https://schema.org/Question"
             >
               <button
                 className="faq-question"
@@ -52,7 +49,7 @@ const FAQ = () => {
                 aria-controls={`faq-answer-${index}`}
                 id={`faq-question-${index}`}
               >
-                <span itemProp="name">{item.question}</span>
+                <span>{item.question}</span>
                 <span className="faq-icon" aria-hidden="true">{activeIndex === index ? '−' : '+'}</span>
               </button>
               <div 
@@ -60,11 +57,8 @@ const FAQ = () => {
                 id={`faq-answer-${index}`}
                 role="region"
                 aria-labelledby={`faq-question-${index}`}
-                itemScope 
-                itemProp="acceptedAnswer" 
-                itemType="https://schema.org/Answer"
               >
-                <p itemProp="text">{item.answer}</p>
+                <p>{item.answer}</p>
               </div>
             </article>
           ))}
