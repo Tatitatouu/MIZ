@@ -32,6 +32,7 @@ export const pageSEO = {
           "name": "Mon Impôt Zen",
           "alternateName": "MIZ",
           "url": "https://monimpotzen.fr",
+          "image": "https://monimpotzen.fr/logo_bleu.svg",
           "logo": {
             "@type": "ImageObject",
             "url": "https://monimpotzen.fr/logo_blanc.svg"
