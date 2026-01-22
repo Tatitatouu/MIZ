@@ -11,9 +11,9 @@ export const siteConfig = {
 
 export const pageSEO = {
   home: {
-    title: "MIZ - Mon Impôt Zen | Simplifiez votre déclaration d'impôts",
-    description: "Plus de 70% des contribuables oublient des avantages fiscaux. MIZ vous accompagne pour optimiser votre déclaration d'impôts et réduire votre imposition légalement. Accompagnement 100% en visioconférence.",
-    keywords: "déclaration impôts, optimisation fiscale, réduction impôts, conseil fiscal, impôt sur le revenu, déclaration revenus, avantages fiscaux, fiscalité particulier, accompagnement fiscal, mon impôt zen",
+    title: "Mon Impôt Zen (MIZ) | Accompagnement Fiscal En Ligne - Déclaration d'Impôts Simplifiée",
+    description: "Mon Impôt Zen (MIZ) - Plus de 70% des contribuables oublient des avantages fiscaux. MIZ vous accompagne pour optimiser votre déclaration d'impôts et réduire votre imposition légalement. Accompagnement 100% en visioconférence.",
+    keywords: "mon impôt zen, mon impot zen, monimpotzen, MIZ, déclaration impôts, optimisation fiscale, réduction impôts, conseil fiscal, impôt sur le revenu, déclaration revenus, avantages fiscaux, fiscalité particulier, accompagnement fiscal, expert comptable en ligne, déclaration fiscale en ligne",
     url: "/",
     structuredData: {
       "@context": "https://schema.org",
