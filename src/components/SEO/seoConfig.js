@@ -37,6 +37,11 @@ export const pageSEO = {
             "url": "https://monimpotzen.fr/logo_blanc.svg"
           },
           "description": "Service d'accompagnement fiscal personnalisé pour particuliers. Optimisation de déclaration d'impôts et conseil patrimonial.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "FR",
+            "addressLocality": "France"
+          },
           "contactPoint": {
             "@type": "ContactPoint",
             "email": "contact@monimpotzen.fr",
