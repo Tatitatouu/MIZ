@@ -1,5 +1,6 @@
 import React from 'react';
 import tristanImage from '../../assets/Image Tristan.jpeg';
+import emirImage from '../../assets/Image Emir.jpg';
 
 const AboutUsFounders = ({ foundersRef, founders }) => {
   return (
@@ -15,6 +16,8 @@ const AboutUsFounders = ({ foundersRef, founders }) => {
               <div className="founder-avatar">
                 {founder.name === 'Tristan' ? (
                   <img src={tristanImage} alt={founder.name} className="founder-avatar-img" />
+                ) : founder.name === 'Emir' ? (
+                  <img src={emirImage} alt={founder.name} className="founder-avatar-img" />
                 ) : (
                   <span>{founder.name.charAt(0)}</span>
                 )}
