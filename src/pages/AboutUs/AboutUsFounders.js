@@ -1,4 +1,5 @@
 import React from 'react';
+import tristanImage from '../../assets/Image Tristan.jpeg';
 
 const AboutUsFounders = ({ foundersRef, founders }) => {
   return (
@@ -12,7 +13,11 @@ const AboutUsFounders = ({ foundersRef, founders }) => {
           {founders.map((founder, index) => (
             <div key={index} className="founder-card">
               <div className="founder-avatar">
-                <span>{founder.name.charAt(0)}</span>
+                {founder.name === 'Tristan' ? (
+                  <img src={tristanImage} alt={founder.name} className="founder-avatar-img" />
+                ) : (
+                  <span>{founder.name.charAt(0)}</span>
+                )}
               </div>
               <div className="founder-trait">{founder.trait}</div>
               <h3 className="founder-name">{founder.name}</h3>

@@ -10,22 +10,17 @@ const AboutUsApproach = ({ approachRef, steps }) => {
         <p className="section-text centered">
           Notre accompagnement repose sur 3 rendez-vous clés en visioconférence, avec un coffre-fort numérique sécurisé pour le dépôt des documents.
         </p>
-        <div className="steps-timeline">
-          <div className="timeline-line"></div>
-          <div className="steps-grid">
+        <div className="approach-timeline">
+          <div className="approach-timeline-line"></div>
+          <div className="approach-steps-grid">
             {steps.map((step, index) => (
-              <React.Fragment key={index}>
-                <div className="approach-step" data-step={index + 1}>
-                  <div className="step-number">{step.number}</div>
-                  <div className="step-content">
-                    <h4 className="step-title">{step.title}</h4>
-                    <p className="step-description">{step.description}</p>
-                  </div>
+              <div key={index} className="approach-step-card">
+                <div className="approach-step-number">{step.number}</div>
+                <div className="approach-step-content">
+                  <h4 className="approach-step-title">{step.title}</h4>
+                  <p className="approach-step-description">{step.description}</p>
                 </div>
-                {index < steps.length - 1 && (
-                  <div className="step-connector" data-connector={index + 1}></div>
-                )}
-              </React.Fragment>
+              </div>
             ))}
           </div>
         </div>

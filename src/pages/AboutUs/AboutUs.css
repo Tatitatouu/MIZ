@@ -527,6 +527,14 @@
   color: white;
   box-shadow: 0 10px 30px rgba(139, 157, 177, 0.25);
   transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.founder-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .founder-card:hover .founder-avatar {
@@ -572,42 +580,42 @@
 }
 
 /* ============================================
-   APPROACH SECTION
+   APPROACH SECTION - STYLE COHÉRENT
    ============================================ */
 .aboutus-approach {
   background: #fafaf8;
-}
-
-.steps-timeline {
   position: relative;
-  margin: 80px 0;
 }
 
-.timeline-line {
+.approach-timeline {
+  position: relative;
+  margin: 70px 0;
+}
+
+.approach-timeline-line {
   position: absolute;
-  top: 50%;
+  top: 45px;
   left: 10%;
   right: 10%;
   height: 4px;
   background: linear-gradient(90deg, #b8c5d6 0%, #d4c5b0 50%, #c4b5a0 100%);
   border-radius: 2px;
-  transform: translateY(-50%);
+  z-index: 0;
 }
 
-.steps-grid {
+.approach-steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 40px;
   position: relative;
   z-index: 1;
 }
 
-.approach-step {
+.approach-step-card {
   text-align: center;
-  padding: 30px 20px;
 }
 
-.step-number {
+.approach-step-number {
   width: 90px;
   height: 90px;
   background: linear-gradient(135deg, #2d4a61 0%, #3d5a71 100%);
@@ -624,12 +632,12 @@
   transition: all 0.4s ease;
 }
 
-.approach-step:hover .step-number {
+.approach-step-card:hover .approach-step-number {
   transform: scale(1.15) rotate(10deg);
   box-shadow: 0 20px 50px rgba(212, 197, 176, 0.35);
 }
 
-.step-content {
+.approach-step-content {
   background: white;
   padding: 30px;
   border-radius: 16px;
@@ -637,22 +645,23 @@
   transition: all 0.3s ease;
 }
 
-.approach-step:hover .step-content {
+.approach-step-card:hover .approach-step-content {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-.approach-step .step-title {
+.approach-step-title {
   font-size: 1.3rem;
   font-weight: 700;
   color: #2d4a61;
   margin: 0 0 10px 0;
 }
 
-.approach-step .step-description {
+.approach-step-description {
   font-size: 1rem;
   color: #666;
   margin: 0;
+  line-height: 1.6;
 }
 
 .offer-box {
@@ -848,56 +857,34 @@
     grid-template-columns: 1fr;
   }
 
-  .steps-grid {
+  .approach-steps-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 30px;
+    max-width: 450px;
+    margin: 0 auto;
   }
 
-  .approach-step {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    text-align: left;
-    padding: 0;
-    opacity: 0;
-  }
-
-  .step-connector {
-    width: 4px;
-    height: 40px;
-    background: linear-gradient(180deg, #b8c5d6 0%, #d4c5b0 50%, #c4b5a0 100%);
-    margin-left: 43px;
-    transform: scaleY(0);
-    transform-origin: top;
-    border-radius: 2px;
-  }
-
-  .step-number {
-    flex-shrink: 0;
-    margin: 0;
-    position: relative;
-    z-index: 2;
-  }
-
-  .step-content {
-    flex: 1;
-  }
-
-  .timeline-line {
+  .approach-timeline-line {
     display: none;
   }
 
-  .steps-timeline::before {
-    content: '';
-    position: absolute;
-    left: 45px;
-    top: 45px;
-    bottom: 45px;
-    width: 4px;
-    background: linear-gradient(180deg, #b8c5d6 0%, #d4c5b0 50%, #c4b5a0 100%);
-    border-radius: 2px;
-    transform-origin: top;
-    transform: scaleY(0);
+  .approach-step-number {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .approach-step-content {
+    padding: 30px 25px;
+  }
+
+  .approach-step-title {
+    font-size: 1.35rem;
+  }
+
+  .approach-step-description {
+    font-size: 1rem;
   }
 
   .offer-box {
