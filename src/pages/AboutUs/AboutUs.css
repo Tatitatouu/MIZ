@@ -537,6 +537,14 @@
   border-radius: 50%;
 }
 
+.founder-avatar-img.tristan-img {
+  object-position: center 15%;
+}
+
+.founder-avatar-img.emir-img {
+  object-position: center 25%;
+}
+
 .founder-card:hover .founder-avatar {
   transform: scale(1.1) rotate(-5deg);
 }

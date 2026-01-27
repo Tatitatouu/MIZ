@@ -15,9 +15,9 @@ const AboutUsFounders = ({ foundersRef, founders }) => {
             <div key={index} className="founder-card">
               <div className="founder-avatar">
                 {founder.name === 'Tristan' ? (
-                  <img src={tristanImage} alt={founder.name} className="founder-avatar-img" />
+                  <img src={tristanImage} alt={founder.name} className="founder-avatar-img tristan-img" />
                 ) : founder.name === 'Emir' ? (
-                  <img src={emirImage} alt={founder.name} className="founder-avatar-img" />
+                  <img src={emirImage} alt={founder.name} className="founder-avatar-img emir-img" />
                 ) : (
                   <span>{founder.name.charAt(0)}</span>
                 )}
