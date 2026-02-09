@@ -1,5 +1,4 @@
 import React from 'react';
-import { FiArrowRight } from 'react-icons/fi';
 import { HiSparkles } from 'react-icons/hi';
 
 const AboutUsApproach = ({ approachRef, steps }) => {
@@ -31,7 +30,6 @@ const AboutUsApproach = ({ approachRef, steps }) => {
           <p className="offer-text">
             <strong>Offre de recommandation :</strong> 3 clients recommandés = remboursement de la cotisation annuelle
           </p>
-          <FiArrowRight className="offer-arrow" />
         </div>
       </div>
     </section>

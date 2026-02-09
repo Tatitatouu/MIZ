@@ -1,14 +1,14 @@
 .steps-container {
   width: 100%;
   background: #fafaf8;
-  padding: 6rem 2rem 0rem 2rem;
+  padding: 2rem 2rem 0rem 2rem;
   position: relative;
   height: auto;
 }
 
 .steps-header {
   max-width: 800px;
-  margin: 0 auto 5rem auto;
+  margin: 0 auto 2rem auto;
   text-align: center;
 }
 
@@ -56,6 +56,11 @@
   will-change: transform;
 }
 
+.steps-item:nth-child(2) .image-text-wrapper,
+.steps-item:nth-child(3) .image-text-wrapper {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
 
 /* --- DESIGN DE LA CARTE --- */
 
@@ -141,34 +146,6 @@
   font-size: 0.85rem;
   flex-shrink: 0;
 }
-
-/* --- BOUTON --- */
-
-.step-button {
-  padding: 1.1rem 2.8rem;
-  background-color: #c4b5a0;
-  color: #ffffff;
-  border: none;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.step-button:hover {
-  background-color: #b8a690;
-  transform: translateY(-2px);
-  padding-right: 3rem;
-  box-shadow: 0 10px 20px rgba(224, 186, 140, 0.35);
-}
-
-.arrow { transition: transform 0.3s ease; }
-
-.step-button:hover .arrow { transform: translateX(5px); }
 
 .big-number {
   position: absolute; 

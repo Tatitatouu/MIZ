@@ -164,7 +164,7 @@
    SECTIONS BASE
    ============================================ */
 .aboutus-section {
-  padding: 120px 20px;
+  padding: 100px 20px;
   position: relative;
 }
 
@@ -270,9 +270,6 @@
 .section-bg-pattern {
   position: absolute;
   inset: 0;
-  background-image: 
-    radial-gradient(circle at 20% 80%, rgba(184, 197, 214, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(212, 197, 176, 0.08) 0%, transparent 50%);
 }
 
 .mission-grid {
@@ -713,13 +710,6 @@
   margin: 0;
   line-height: 1.7;
   flex: 1;
-}
-
-.offer-arrow {
-  width: 30px;
-  height: 30px;
-  color: #c4b5a0;
-  animation: arrowBounce 1.5s ease-in-out infinite;
 }
 
 @keyframes arrowBounce {

@@ -8,9 +8,9 @@ export default function Steps() {
       <div className="steps-header">
         <h2 className="steps-title" id="steps-title">Les 3 étapes de notre relation</h2>
       </div>
-      <ol className="steps-list" aria-label="Étapes de l'accompagnement fiscal">
+      <div className="steps-list" aria-label="Étapes de l'accompagnement fiscal">
         {stepsData.map((step, index) => (
-          <li
+          <div
             key={index}
             className="steps-item"
             style={{
@@ -33,19 +33,11 @@ export default function Steps() {
                     </li>
                   ))}
                 </ul>
-
-                <button 
-                  className="step-button"
-                  aria-label={`En savoir plus sur la phase ${step.number} : ${step.title}`}
-                >
-                  En savoir plus <span className="arrow" aria-hidden="true">→</span>
-                </button>
-
               </div>
             </article>
-          </li>
+          </div>
         ))}
-      </ol>
+      </div>
     </section>
   );
 }

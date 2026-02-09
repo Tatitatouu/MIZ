@@ -23,7 +23,7 @@ const FAQ = () => {
     },
     {
       question: "Combien de temps dure un accompagnement ?",
-      answer: "L'accompagnement est annuel avec un suivi régulier. Après la première année à 240€ TTC, vous pouvez continuer à bénéficier de nos services pour 20€ TTC par mois, ce qui représente un accompagnement continu et une tranquillité d'esprit tout au long de l'année."
+      answer: "L'accompagnement est annuel sur la base de trois rendez-vous, le rendez-vous peut durer de 30minutes à 1 heure en fonction du cas du client."
     }
   ];
 
