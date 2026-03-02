@@ -1,53 +1,63 @@
 import React from 'react';
 import './WhyUs.css';
-import { FiCheck, FiClock, FiShield, FiHeart } from 'react-icons/fi';
 
 export default function WhyUs() {
-  const advantages = [
+  const services = [
     {
-      icon: <FiCheck size={36} aria-hidden="true" />,
-      title: "Simplicité",
-      description: "Une démarche claire et accessible à tous",
-      tags: ["Accessible", "Rapide", "Efficace"]
+      badge: 'Immobilier locatif',
+      title: 'Biens en location & dispositifs',
+      items: [
+        'Location nue, meublée (micro-BIC ou réel)',
+        'Dispositifs PINEL, MALRAUX, JEANBRUN, Monument Historique, etc.',
+        'Déclarations 2044, 2044EB, 2042C PRO…'
+      ]
     },
     {
-      icon: <FiClock size={36} aria-hidden="true" />,
-      title: "Gain de temps",
-      description: "On s'occupe de tout, vous profitez de votre temps",
-      tags: ["Automatisation", "Suivi 24/7", "Réactivité"]
+      badge: 'Réductions & crédits',
+      title: 'Optimisation et vérification',
+      items: [
+        "Vérification de l’éligibilité",
+        'Réalisation de la 2042RICI'
+      ]
     },
     {
-      icon: <FiShield size={36} aria-hidden="true" />,
-      title: "Sécurité",
-      description: "Vos données sont protégées et confidentielles",
-      tags: ["Cryptage", "Conformité", "Sécurisé"]
+      badge: 'Foyer fiscal',
+      title: 'Calculs & simulations',
+      items: [
+        "Frais réels, frais de garde",
+        "Impact sur le foyer fiscal (enfant rattaché ou non)",
+        'Simulations en cas de mariage, PACS, divorce, arrivée d’un enfant'
+      ]
     },
     {
-      icon: <FiHeart size={36} aria-hidden="true" />,
-      title: "Accompagnement",
-      description: "Un expert dédié à votre écoute",
-      tags: ["Consulting", "Formation", "Support"]
+      badge: 'Situations internationales',
+      title: 'Frontaliers Suisses',
+      items: [
+        'Déclarations pour frontaliers',
+        '2047 et charges de couverture sociale'
+      ]
     }
   ];
 
   return (
     <section className="whyus-container" aria-labelledby="whyus-title">
       <div className="whyus-content">
-        <h2 className="whyus-title" id="whyus-title">Notre engagement</h2>
-        <p className="whyus-subtitle">Simplifiez vos impôts, gagnez en sérénité</p>
-        <div className="advantages-grid" role="list">
-          {advantages.map((advantage, index) => (
-            <article key={index} className="advantage-card" role="listitem">
-              <div className="advantage-icon">
-                {advantage.icon}
-              </div>
-              <h3 className="advantage-title">{advantage.title}</h3>
-              <p className="advantage-description">{advantage.description}</p>
-              <div className="advantage-tags" aria-label={`Points clés : ${advantage.tags.join(', ')}`}>
-                {advantage.tags.map((tag, idx) => (
-                  <span key={idx} className="tag">{tag}</span>
+        <div className="whyus-hero">
+          <h2 className="whyus-title" id="whyus-title">Déclaration de patrimoine</h2>
+          <p className="whyus-subtitle">Simplifiez vos impôts, gagnez en sérénité</p>
+        </div>
+
+        <div className="service-grid" role="list">
+          {services.map((service, index) => (
+            <article key={index} className="service-card" role="listitem">
+              <span className="service-badge">{service.badge}</span>
+              <h3 className="service-title">{service.title}</h3>
+              <ul className="service-list">
+                {service.items.map((item, idx) => (
+                  <li key={idx} className="service-item">{item}</li>
                 ))}
-              </div>
+              </ul>
+              <div className="service-divider" aria-hidden="true" />
             </article>
           ))}
         </div>

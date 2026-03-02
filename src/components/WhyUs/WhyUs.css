@@ -1,6 +1,6 @@
 .whyus-container {
   width: 100%;
-  padding: 5rem 2rem 6rem 2rem;
+  padding: 3rem 2rem 5rem 2rem;
   background: linear-gradient(180deg, #fafaf8 0%, #f5f3f0 50%, #fafaf8 100%);
   font-family: 'Satoshi', sans-serif;
   position: relative;
@@ -38,6 +38,11 @@
   z-index: 1;
 }
 
+.whyus-hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
 .whyus-title {
   text-align: center;
   font-size: clamp(2rem, 4vw, 3rem);
@@ -71,11 +76,11 @@
   padding: 1em 0em;
 }
 
-.advantages-grid {
+.service-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   animation: fadeInUp 0.8s ease-out;
 }
 
@@ -90,94 +95,116 @@
   }
 }
 
-.advantage-card {
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  padding: 2.5rem 1.5rem;
-  border-radius: 16px;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+
+.service-card {
   position: relative;
-  overflow: visible;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 2.4rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #ffffff 0%, #f7f2ec 100%);
+  border: 1px solid rgba(196, 181, 160, 0.35);
+  box-shadow:
+    0 12px 30px rgba(45, 74, 97, 0.08),
+    0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+  display: grid;
+  gap: 1rem;
 }
 
-.advantage-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 24px rgba(79, 107, 132, 0.15);
-  border-color: #4f6b84;
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: -40% 0;
+  background: linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.55) 50%, transparent 80%);
+  opacity: 0.25;
+  transform: translateX(-60%);
+  animation: shimmerSweep 7s ease-in-out infinite;
+  pointer-events: none;
 }
 
-.advantage-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 64px;
-  height: 64px;
-  color: #ffffff;
-  background: linear-gradient(135deg, #8b9db1 0%, #6b7d91 100%);
-  border-radius: 50%;
-  margin-bottom: 1.5rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 16px rgba(139, 157, 177, 0.25);
+.service-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(139, 157, 177, 0.2), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.advantage-card:hover .advantage-icon {
-  transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(139, 157, 177, 0.4);
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(79, 107, 132, 0.45);
+  box-shadow:
+    0 18px 45px rgba(45, 74, 97, 0.12),
+    0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
-.advantage-title {
-  font-size: 1.2rem;
-  font-weight: 600;
+.service-card:hover::after {
+  opacity: 1;
+}
+
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-60%);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(60%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card::before {
+    animation: none;
+  }
+}
+
+.service-badge {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: rgba(196, 181, 160, 0.2);
   color: #2d4a61;
-  margin-bottom: 0.75rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.advantage-description {
-  font-size: 0.95rem;
-  color: #6b7280;
-  line-height: 1.6;
+.service-title {
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  font-weight: 700;
+  color: #1f2d3a;
   margin: 0;
-}
-
-.advantage-tags {
-  display: none;
-}
-
-.tag {
-  display: none;
+  line-height: 1.35;
 }
 
 .service-list {
-  list-style: none;
-  padding: 0;
   margin: 0;
-  text-align: left;
-}
-
-.service-list li {
-  font-size: 0.92rem;
+  padding-left: 1.2rem;
   color: #4a4a4a;
-  line-height: 1.7;
-  margin-bottom: 0.9rem;
-  padding-left: 1.3rem;
-  position: relative;
+  display: grid;
+  gap: 0.6rem;
 }
 
-.service-list li:before {
-  content: "•";
-  color: #2d4a61;
-  font-weight: bold;
-  font-size: 1.3rem;
-  position: absolute;
-  left: 0;
-  top: -0.15rem;
+.service-item {
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.service-divider {
+  width: 70px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #8b9db1 0%, #c4b5a0 100%);
+}
+
+.service-answer {
+  font-size: 1rem;
+  color: #4a4a4a;
+  margin: 0;
 }
 
 /* --- RESPONSIVE (Tablet: 768px to 1024px) --- */
@@ -193,14 +220,13 @@
     right: -80px;
   }
 
-  .advantages-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
   }
 
-  .advantage-card {
-    padding: 2.5rem 2rem;
-    min-height: 300px;
+  .service-card {
+    padding: 2.2rem;
   }
 }
 
@@ -226,30 +252,12 @@
     margin-bottom: 2rem;
   }
 
-  .advantages-grid {
+  .service-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .advantage-card {
-    padding: 2rem 1.5rem;
-  }
-
-  .advantage-icon {
-    width: 70px;
-    height: 70px;
-  }
-
-  .advantage-icon svg {
-    width: 32px;
-    height: 32px;
-  }
-
-  .advantage-title {
-    font-size: 1.2rem;
-  }
-
-  .advantage-description {
-    font-size: 0.95rem;
+  .service-card {
+    padding: 1.8rem;
   }
 }
