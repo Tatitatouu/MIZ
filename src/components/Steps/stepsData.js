@@ -24,7 +24,7 @@ export const stepsData = [
     title: "Réglez 240€ TTC",
     description: "Un tarif simple et transparent pour un accompagnement complet sur l'année.",
     details: [
-      "1ère année : 240€ TTC",
+      "240€ TTC par an",
       "Option au succès : En cas de déclarations rectificatives nos honoraires porteront sur les économies que vous allez réaliser !",
       "Exemple : Economie fiscale identifiée : 1 200€ -> Honoraires : 240€ (soit 20%) -> Gain Net + 960€"
     ]
