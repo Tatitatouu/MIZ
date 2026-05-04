@@ -12,7 +12,7 @@ const CGVContent = () => (
     <p>Le contrat est conclu pour une durée initiale d'un (1) an et se renouvelle tacitement par périodes successives d'un (1) an, sauf résiliation par l'une des parties avec un préavis de 90 jours avant échéance.</p>
 
     <h3>Article 4 – Prix et conditions de paiement</h3>
-    <p><strong>Première année :</strong> 240 € TTC, payable en une seule fois à la signature du contrat.</p>
+    <p><strong>Première année :</strong> 340 € TTC, payable en une seule fois à la signature du contrat.</p>
     <p><strong>Années suivantes :</strong> 20 € TTC par mois, par prélèvement automatique, à compter du mois de juillet de l’année en cours. Le contrat est reconduit tacitement.</p>
     <p><strong>Économies fiscales :</strong> en complément, le Prestataire percevra une rémunération de 20 % TTC calculée sur le montant des économies fiscales effectivement obtenues par le Client à la suite de la révision des trois (3) années fiscales précédentes.  
     Le calcul est effectué exclusivement sur la base d’un document officiel de l’administration fiscale (avis de rectification ou avis d’imposition modifié).</p>

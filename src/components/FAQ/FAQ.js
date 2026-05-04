@@ -7,7 +7,7 @@ const FAQ = () => {
   const faqData = [
     {
       question: "Quels sont vos tarifs ?",
-      answer: "Nos tarifs sont simples et transparents : 240€ TTC pour la première année pour un accompagnement complet. Les années suivantes, 20€ TTC par mois. Nous proposons également une option au succès : 20% des économies fiscales réalisées sur les trois dernières années."
+      answer: "Nos tarifs sont simples et transparents : 340€ TTC pour la première année pour un accompagnement complet. Les années suivantes, 20€ TTC par mois. Nous proposons également une option au succès : 20% des économies fiscales réalisées sur les trois dernières années."
     },
     {
       question: "Pourquoi faire appel à vos services ?",

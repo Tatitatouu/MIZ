@@ -71,7 +71,7 @@ export const pageSEO = {
                   "name": "Accompagnement fiscal première année",
                   "description": "Accompagnement complet pour votre déclaration d'impôts"
                 },
-                "price": "240",
+                "price": "340",
                 "priceCurrency": "EUR"
               },
               {
@@ -102,7 +102,7 @@ export const pageSEO = {
               "name": "Quels sont vos tarifs ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Nos tarifs sont simples et transparents : 240€ TTC pour la première année pour un accompagnement complet. Les années suivantes, 20€ TTC par mois. Nous proposons également une option au succès : 20% des économies fiscales réalisées sur les trois dernières années."
+                "text": "Nos tarifs sont simples et transparents : 340€ TTC pour la première année pour un accompagnement complet. Les années suivantes, 20€ TTC par mois. Nous proposons également une option au succès : 20% des économies fiscales réalisées sur les trois dernières années."
               }
             },
             {
@@ -126,7 +126,7 @@ export const pageSEO = {
               "name": "Combien de temps dure un accompagnement ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "L'accompagnement est annuel avec un suivi régulier. Après la première année à 240€ TTC, vous pouvez continuer à bénéficier de nos services pour 20€ TTC par mois, ce qui représente un accompagnement continu et une tranquillité d'esprit tout au long de l'année."
+                "text": "L'accompagnement est annuel avec un suivi régulier. Après la première année à 340€ TTC, vous pouvez continuer à bénéficier de nos services pour 20€ TTC par mois, ce qui représente un accompagnement continu et une tranquillité d'esprit tout au long de l'année."
               }
             }
           ]
